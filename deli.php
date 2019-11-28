@@ -7,7 +7,7 @@ $ch = curl_init();
 
 $headerArray = array("X-Service-Id:userauth", "client_id:eplus_app", "Content-Type:application/json;charset=UTF-8");
 $url = "https://v2-app.delicloud.com/api/v2.0/auth/loginMobile";
-$data = '{"password":"e10adc3949ba59abbe56e057f20f883e","mobile":"13305635120"}';
+$data = '{"password":"e10adc3949ba59abbe56e057f20f883e","mobile":'.$phone.'}';
 
 
 curl_setopt($ch, CURLOPT_URL, $url);
