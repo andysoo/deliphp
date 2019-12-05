@@ -1,6 +1,7 @@
+<meta charset="UTF-8">
 <?php
 if (!$_POST['phone'] || !$_POST['password']) {
-    die("登录失败   !");
+    die("<h2>提交失败</h2>!");
 }
 
 $phone = $_POST['phone'];
@@ -35,7 +36,7 @@ if (property_exists($data, "data")) {
     $token = $data->data->token;
     $user_id = $data->data->user_id;
 } else {
-    die("登录失败！");
+    die("<h2>登录失败！</h2>");
 }
 
 $ch = curl_init();
